@@ -62,14 +62,27 @@ function calculateResult() {
     document.getElementById("result").classList.remove("animated");
   }, 1000);
 }
+
+const inputs = document.querySelectorAll(".inputs input");
+
 function handleKeydown(event) {
   // If the enter key was pressed
   if (event.key === "Enter") {
-    // Trigger the calculate button
-    document.getElementById("calculate").click();
+    // Get the index of the current input
+    const index = inputs.indexOf(event.target);
+
+    // If the current input is not the last input
+    if (index < inputs.length - 1) {
+      // Move focus to the next input
+      inputs[index + 1].focus();
+    }
+    // If the current input is the last input
+    else {
+      // Trigger the calculate button
+      document.getElementById("calculate").click
+    }
   }
 }
-
 // Add an event listener to the document to listen for keydown events
 document.addEventListener("keydown", handleKeydown);
 
