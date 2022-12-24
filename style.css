@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 body {
+  scroll-behavior: smooth;
   min-height: 100vh;
   max-width: 768px;
   margin: 0 auto;
