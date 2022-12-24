@@ -4,6 +4,7 @@ inputs.forEach(input => {
   input.min = 1;
   input.max = 100;
   input.setAttribute("onkeyup", "enforceMinMax(this)");
+  input.placeholder = 'Input a number between 1 - 100';
 });
 
 function enforceMinMax(inputElement) {

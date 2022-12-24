@@ -1,49 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ip calculator.</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <h2>IP Calculator</h2>
+    <p>@raaharja</p>
     <div class="row">
-      <label for="input1">PAI</label>
-      <input type="number" id="input1" />
-      <label for="input2">PPkn</label>
-      <input type="number" id="input2" />
-      <label for="input3">Bahasa Indonesia</label>
-      <input type="number" id="input3" />
-      <label for="input4">MTKW</label>
-      <input type="number" id="input4" />
-      <label for="input5">Sejarah Indonesia</label>
-      <input type="number" id="input5" />
-      <label for="input6">Bahasa Inggris</label>
-      <input type="number" id="input6" />
-      <label for="input7">SBK</label>
-      <input type="number" id="input7" />
-      <label for="input8">PJOK</label>
-      <input type="number" id="input8" />
-      <label for="input9">PKWU</label>
-      <input type="number" id="input9" />
-      <label for="input10">Bahasa Jawa</label>
-      <input type="number" id="input10" />
-      <label for="input11">MTKP</label>
-      <input type="number" id="input11" />
-      <label for="input12">Biologi</label>
-      <input type="number" id="input12" />
-      <label for="input13">Fisika</label>
-      <input type="number" id="input13" />
-      <label for="input14">Kimia</label>
-      <input type="number" id="input14" />
-      <label for="input13">Limit</label>
-      <input type="number" id="input15" />
+        <div class="inputs">
+          <label id="PAI" for="input1">PAI</label>
+          <input type="number" id="input1" />
+        </div>
+        <div class="inputs">
+          <label id="PPkn" for="input2">PPkn</label>
+          <input type="number" id="input2" />
+        </div>
+        <div class="inputs">
+          <label id="Bahasa Indonesia" for="input3">Bahasa Indonesia</label>
+          <input type="number" id="input3" />
+        </div>
+        <div class="inputs">
+          <label id="MTKW" for="input4">MTKW</label>
+          <input type="number" id="input4" />
+        </div>
+        <div class="inputs">
+          <label id="Sejarah Indonesia" for="input5">Sejarah Indonesia</label>
+          <input type="number" id="input5" />
+        </div>
+        <div class="inputs">
+          <label id="Bahasa Inggris" for="input6">Bahasa Inggris</label>
+          <input type="number" id="input6" />
+        </div>
+        <div class="inputs">
+          <label id="SBK" for="input7">SBK</label>
+          <input type="number" id="input7" />
+        </div>
+        <div class="inputs">
+          <label id="PJOK" for="input8">PJOK</label>
+          <input type="number" id="input8" />
+        </div>
+        <div class="inputs">
+          <label id="PKWU" for="input9">PKWU</label>
+          <input type="number" id="input9" />
+        </div>
+        <div class="inputs">
+          <label id="Bahasa Jawa" for="input10">Bahasa Jawa</label>
+          <input type="number" id="input10" />
+        </div>
+        <div class="inputs">
+          <label id="MTKP" for="input11">MTKP</label>
+          <input type="number" id="input11" />
+        </div>
+        <div class="inputs">
+          <label id="Biologi" for="input12">Biologi</label>
+          <input type="number" id="input12" />
+        </div>
+        <div class="inputs">
+          <label id="Fisika" for="input13">Fisika</label>
+          <input type="number" id="input13" />
+        </div>
+        <div class="inputs">
+          <label for="input14">Kimia</label>
+          <input type="number" id="input14" />
+        </div>
+        <div class="inputs">
+          <label for="input15">Limit</label>
+          <input type="number" id="input15" />
+        </div>
+
     </div>
-    <div class="row">
+    <div class="row-c">
       <button id="calculate">Calculate</button>
+      <div id="result">Result: <span id="result-value"></span></div>
     </div>
     
     <br>
-    <div id="result">Result: <span id="result-value"></span></div>
+   
+    <br>
   </div>
   <script src="scritpt.js">  </script>
 </body>
