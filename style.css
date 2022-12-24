@@ -115,6 +115,14 @@ button:hover {
   padding: 20px 20px;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+  /* fallback */
+  -webkit-mask: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 25%,
+    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
   mask: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0) 0%,
