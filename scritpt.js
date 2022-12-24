@@ -1,13 +1,54 @@
-function calculateResult() {
-  // Get the values from the input fields
-  const value1 = parseInt(document.getElementById("input1").value);
-  const value2 = parseInt(document.getElementByIdd("input2").value);
-  const value3 = parseInt(document.getElementByIdd("input3").value);
-  const value4 = parseInt(document.getElementByIdd("input4").value);
+const inputs = document.querySelectorAll("input[type=number]");
 
-  // Calculate the result
-  const result = value1 + value2 + value3 + value4 / 15 ;
-   /* your calculation using the values here */
+inputs.forEach(input => {
+  input.min = 1;
+  input.max = 100;
+  input.setAttribute("onkeyup", "enforceMinMax(this)");
+});
+
+function enforceMinMax(inputElement) {
+  const value = inputElement.value;
+  const min = inputElement.min;
+  const max = inputElement.max;
+
+  if (value === "") {
+    return;
+  }
+
+  const valueAsNumber = parseInt(value);
+  const minAsNumber = parseInt(min);
+  const maxAsNumber = parseInt(max);
+
+  if (valueAsNumber < minAsNumber) {
+    inputElement.value = min;
+  }
+  if (valueAsNumber > maxAsNumber) {
+    inputElement.value = max;
+  }
+}
+
+
+
+function calculateResult() {
+  // Initialize a variable to hold the total value
+  let total = 0;
+
+  // Loop through all of the input elements
+  for (let i = 1; i <= 15; i++) {
+    // Get the value of the current input element
+    const value = document.getElementById(`input${i}`).value;
+
+    // Check if the value is empty
+    if (value !== "") {
+      // Convert the value to a number and add it to the total
+      total += parseInt(value);
+    }
+  }
+
+  // Calculate the result by dividing the total by 15
+  const result = total / 15;
+
+  /* your calculation using the result here */
 
   // Display the result
   document.getElementById("result-value").textContent = result;
