@@ -1,89 +1,148 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 body {
-    min-height: 100vh;
-    max-width: 768px;
-    margin: 0 auto;
-    background: #2b2b33;
-    color: #d8d1ff;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    justify-content: center; 
-    font-size: larger; /* Increase the font size */
-  }
-  
-  h2 {
-    margin-top: 20%;
-    line-height: 0%;
-    color: #8069ff;
-  }
-  
-  label {
-    text-align: left;
-  }
-
-
-  input, button {
-    width: 90%; 
-    margin: 5px auto;
-    color: white;
-    border: none;
-    background: #45454e;
-    border-radius: 5px;
-    
-  }
-
-
-  input {
-    margin: 10px auto;
-    padding: 15px;
-  }
-
-input:focus, input.form-control:focus {
-    outline:none;
-    outline-width: 0px !important;
-    box-shadow: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
+  min-height: 100vh;
+  max-width: 768px;
+  margin: 0 auto;
+  background: #2b2b33;
+  color: #d8d1ff;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+  font-size: larger; /* Increase the font size */
 }
 
-input:focus button:hover {
-    border: 1px solid #696970;
-  }
-  
-  .row {
-    padding: 0.5rem 2rem;
-    margin: 20px 0; /* Increase the spacing between rows */
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-bottom: 5rem;
-  }
-  button {
-    font-weight: 600;
-    bottom: 50px; /* anchor the button to the bottom of the viewport */
-    left: 0; /* anchor the button to the left of the viewport */
-    right: 0; /* anchor the button to the right of the viewport */
-    margin: 0px ; /* center the button horizontally */
-    padding: 15px 0px;
-    background: #8069ff;
-    color: white;
-    
-  }
-  
-.row-c {
-    font-weight: 600;
-    position: fixed; /* position the button fixed to the bottom of the viewport */
-    bottom: 20px; /* anchor the button to the bottom of the viewport */
-    left: 0; /* anchor the button to the left of the viewport */
-    right: 0; /* anchor the button to the right of the viewport */
-    margin: auto 2rem;
-    padding: 10px 20px;
+h2 {
+  margin-top: 15%;
+  line-height: 0%;
+  color: #8069ff;
+  text-shadow: 10px 5px 20px #473897;
+  transition: 1s ease-in-out;
+}
 
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+h2:hover {
+  text-shadow: 15px 10px 60px #1f174a;
+}
+
+a {
+  font-size: small;
+  line-height: 0%;
+  color: #d8d1ff;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+a:hover {
+  color: #8069ff;
+}
+
+label {
+  padding: 5px 20px;
+  font-size: 15px;
+}
+
+input,
+button {
+  width: 90%;
+  margin: 5px auto;
+  color: white;
+  border: none;
+  background: #45454e;
+  border-radius: 5px;
+}
+
+input {
+  text-align: center;
+  outline: 0px solid #2b2b33;
+  margin: 10px auto;
+  padding: 15px;
+  transition: 0.2s ease-in-out;
+  box-shadow: 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.008),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.012),
+    100px 100px 80px rgba(0, 0, 0, 0.02);
+}
+
+input:hover {
+  opacity: 0.7;
+}
+
+input:focus,
+input.form-control:focus {
+  outline: 2px solid #696970;
+  opacity: 0.4;
+  color: white;
+}
+
+.row {
+  padding: 0.5rem 2rem;
+  margin: 20px 0; /* Increase the spacing between rows */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+}
+button {
+  outline: 0px solid #5e47de;
+  font-weight: 600;
+  bottom: 50px; /* anchor the button to the bottom of the viewport */
+  left: 0; /* anchor the button to the left of the viewport */
+  right: 0; /* anchor the button to the right of the viewport */
+  margin: 0px; /* center the button horizontally */
+  padding: 15px 0px;
+  background: #8069ff;
+  color: white;
+  box-shadow: 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.008),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.012),
+    100px 100px 80px rgba(0, 0, 0, 0.02);
+  transition: 0.5s ease-in-out;
+}
+button:hover {
+  font-size: 15px;
+  cursor: pointer;
+  background: #5e47de;
+  outline: 2px solid #9c8bfd;
+}
+
+.row-c {
+  background: #2b2b332f;
+  font-weight: 600;
+  position: fixed; /* position the button fixed to the bottom of the viewport */
+  bottom: 20px; /* anchor the button to the bottom of the viewport */
+  left: 0; /* anchor the button to the left of the viewport */
+  right: 0; /* anchor the button to the right of the viewport */
+  margin: auto 0;
+
+  padding: 20px 20px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  mask: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 25%,
+    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .inputs {
-    margin: 10px 0;
+  color: white;
+  margin: 10px 0;
+}
+
+#result {
+  margin: 0px 20px;
+  padding: 5px 10px;
+  opacity: 0.8;
+
+  transition: all 0.5s ease-in-out;
+}
+
+/* Add the "animated" class to the result element to apply the animation */
+#result.animated {
+  opacity: 1;
+  transform: translateY(-20);
+  -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
+  color: white;
+  transform: scale(1.2);
 }

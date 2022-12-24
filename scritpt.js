@@ -1,10 +1,10 @@
 const inputs = document.querySelectorAll("input[type=number]");
 
-inputs.forEach(input => {
+inputs.forEach((input) => {
   input.min = 1;
   input.max = 100;
   input.setAttribute("onkeyup", "enforceMinMax(this)");
-  input.placeholder = 'Input a number between 1 - 100';
+  input.placeholder = "Isi dengan nomor 1 - 100";
 });
 
 function enforceMinMax(inputElement) {
@@ -28,9 +28,9 @@ function enforceMinMax(inputElement) {
   }
 }
 
-
-
 function calculateResult() {
+    // Pass in the id of an element
+
   // Initialize a variable to hold the total value
   let total = 0;
 
@@ -53,7 +53,25 @@ function calculateResult() {
 
   // Display the result
   document.getElementById("result-value").textContent = result;
+
+  // Add the "animated" class to the result element
+  document.getElementById("result").classList.add("animated");
+  
+  // Wait for 1 second before removing the "animated" class
+  setTimeout(function () {
+    document.getElementById("result").classList.remove("animated");
+  }, 1000);
 }
+function handleKeydown(event) {
+  // If the enter key was pressed
+  if (event.key === "Enter") {
+    // Trigger the calculate button
+    document.getElementById("calculate").click();
+  }
+}
+
+// Add an event listener to the document to listen for keydown events
+document.addEventListener("keydown", handleKeydown);
 
 // Add an event listener to the calculate button
 document.getElementById("calculate").addEventListener("click", calculateResult);

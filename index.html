@@ -8,10 +8,10 @@
 <body>
     <h2>kalkulator ip.</h2>
     <p>menghitung total ip mu :) </p>
-    <p>@raaharja</p>
+    <a href="https://instagram.com/raaharja">@raaharja</a>
     <div class="row">
         <div class="inputs">
-          <label id="PAI" for="input1">PAI</label>
+          <label id="Pendidikan Agama" for="input1">Pendidikan Agama</label>
           <input type="number" id="input1" />
         </div>
         <div class="inputs">
@@ -35,7 +35,7 @@
           <input type="number" id="input6" />
         </div>
         <div class="inputs">
-          <label id="SBK" for="input7">SBK</label>
+          <label id="Seni Budaya" for="input7">Seni Budaya</label>
           <input type="number" id="input7" />
         </div>
         <div class="inputs">
@@ -43,7 +43,7 @@
           <input type="number" id="input8" />
         </div>
         <div class="inputs">
-          <label id="PKWU" for="input9">PKWU</label>
+          <label id="Prakarya" for="input9">Prakarya</label>
           <input type="number" id="input9" />
         </div>
         <div class="inputs">
@@ -73,14 +73,26 @@
 
     </div>
     <div class="row-c">
-      <button id="calculate">Hitung</button>
+      
+      <button id="calculate" onclick="removeButton(event)">Hitung</button>
       <div id="result">IP : <span id="result-value"></span></div>
     </div>
     
     <br>
-   
     <br>
   </div>
+  <script src="confetti.min.js"></script>
+  <script>
+    let confetti = new Confetti("calculate");
+    confetti.setSize(1.5);
+    confetti.setCount(20);
+    function removeButton(t) {
+        (t.target.style.opacity = 0),
+          setTimeout(() => {
+            (t.target.style.visibility = ""), (t.target.style.opacity = 1);
+          }, 2e3);
+      }
+  </script>
   <script src="scritpt.js">  </script>
 </body>
 </html>
