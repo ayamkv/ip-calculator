@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IP CALCULATOR</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h2>IP Calculator</h2>
+  <div id="calculator">
+    <div class="row">
+      <input type="text" id="input1" />
+    </div>
+    <div class="row">
+      <input type="text" id="input2" />
+    </div>
+    <div class="row">
+      <input type="text" id="input3" />
+    </div>
+    <div class="row">
+      <input type="text" id="input4" />
+    </div>
+    <div class="row">
+      <button id="calculate">Calculate</button>
+    </div>
+    <br>
+    <div id="result">Result: <span id="result-value"></span></div>
+  </div>
+  <script>
+      
+      function calculateResult() {
+  // Get the values from the input fields
+  const value1 = parseInt(document.getElementById("input1").value);
+  const value2 = parseInt(document.getElementById("input2").value);
+  const value3 = parseInt(document.getElementById("input3").value);
+  const value4 = parseInt(document.getElementById("input4").value);
+
+  // Calculate the result
+  const result = (value1 + value2 + value3 + value4) / 15;
+   /* your calculation using the values here */
+
+  // Display the result
+  document.getElementById("result-value").textContent = result;
+}
+
+// Add an event listener to the calculate button
+document.getElementById("calculate").addEventListener("click", calculateResult);
+
+  </script>
+</body>
+</html>
