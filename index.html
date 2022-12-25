@@ -11,6 +11,7 @@
     <h2>kalkulator ip.</h2>
     <p>menghitung total ip mu :) </p>
     <a href="https://instagram.com/raaharja">@raaharja</a>
+    <p id="safari"></p>
     <div class="row">
         <div class="inputs">
           <label id="Pendidikan Agama" for="input1">Pendidikan Agama</label>
@@ -94,6 +95,10 @@
             (t.target.style.visibility = ""), (t.target.style.opacity = 1);
           }, 1.3e3);
       }
+      if (navigator.userAgent.includes("Safari")) {
+      document.getElementById("safari").innerHTML = "anjay, si paling iphone ";
+    }
+
   </script>
   <script src="scritpt.js">  </script>
 </body>
