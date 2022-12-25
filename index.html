@@ -98,6 +98,10 @@
       if ('safari' in window.navigator && window.navigator.vendor.indexOf('Apple') !== -1) {
   document.getElementById("safari").innerHTML = "anjay si paling iphone";
 }
+if (!('chrome' in window)) {
+  document.getElementById("safari").innerHTML = "";
+}
+
 
 
   </script>
