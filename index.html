@@ -95,9 +95,10 @@
             (t.target.style.visibility = ""), (t.target.style.opacity = 1);
           }, 1.3e3);
       }
-      if (navigator.userAgent.includes("Safari")) {
-      document.getElementById("safari").innerHTML = "anjay, si paling iphone ";
-    }
+      if ('safari' in window.navigator && window.navigator.vendor.indexOf('Apple') !== -1) {
+  document.getElementById("safari").innerHTML = "anjay si paling iphone";
+}
+
 
   </script>
   <script src="scritpt.js">  </script>
