@@ -214,3 +214,8 @@ button:hover {
 #raw-c.result {
   background: #bb00ff9d;
 }
+
+#safari {
+  font-weight: bold;
+  color: white;
+}
