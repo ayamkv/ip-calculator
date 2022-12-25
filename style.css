@@ -105,15 +105,23 @@ button:hover {
 }
 
 .row-c {
-  background: #2b2b332f;
+  background: #4900b749;
   font-weight: 600;
   position: fixed; /* position the button fixed to the bottom of the viewport */
-  bottom: 20px; /* anchor the button to the bottom of the viewport */
+  bottom: 0; /* anchor the button to the bottom of the viewport */
   left: 0; /* anchor the button to the left of the viewport */
   right: 0; /* anchor the button to the right of the viewport */
-  margin: auto 0;
+  margin: 0;
 
-  padding: 20px 20px;
+  padding: 80px 20px;
+
+
+  /* set the top of the button to the height of the viewport minus the height of the button */
+  top: calc(100vh - 180px);
+
+  /* set the height of the button to the height of the viewport minus the padding */
+  height: calc(100vh - 10px);
+
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   /* fallback */
@@ -131,7 +139,9 @@ button:hover {
     rgba(0, 0, 0, 1) 90%,
     rgba(0, 0, 0, 0) 100%
   );
+  transition: all 0.5s ease-in-out;
 }
+
 
 .inputs {
   color: white;
@@ -154,4 +164,9 @@ button:hover {
   backdrop-filter: blur(0px);
   color: white;
   transform: scale(1.2);
+}
+
+#raw-c.result {
+  background: #bb00ff9d;
+  padding: 50px 20px;
 }
