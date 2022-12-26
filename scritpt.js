@@ -55,7 +55,7 @@ function calculateResult() {
   /* your calculation using the result here */
 
   // Display the result
-  document.getElementById("result-value").textContent = result;
+  document.getElementById("result-value").textContent = result.toFixed(2);
 
   // Add the "animated" class to the result element
   document.getElementById("result").classList.add("animated");
