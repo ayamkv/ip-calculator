@@ -1,19 +1,23 @@
 # [ip-calculator](https://hitung-ip.pages.dev)
-This is a form for inputting and calculating student grades. It reads from a JSON file and generates a form with input fields for each subject listed in the file. The user can input their grades for each subject and the app will calculate their overall average grade.
-
-
+a form for inputting and calculating student grades. 
+<br><br>
 
 _very customizable dawg_
+<br>
+#     
+### ⚙️ How it works 
+It reads from a JSON file and generates a form with input fields for each subject listed in the file. 
+The user can input their grades for each subject and the app will calculate their overall average grade.
 
 
 
 
 ### 📚 Subjects 
 
-the inputs are automatically generated with `createInput.js` so you just need to change the json file
+As stated above, the inputs are automatically generated with `createInput.js` so you just need to change the json file
 <br>
 #### **`mapel.json`** :
-```json
+```yaml
 {
   "listMapel": [
     "Pendidikan Agama",
@@ -30,7 +34,7 @@ the inputs are automatically generated with `createInput.js` so you just need to
     "Biologi",
     "Fisika",
     "Kimia",
-    "Limit"
+    "Limit"   # add your subjects 
   ]
 }
 ```
