@@ -1,6 +1,6 @@
 # [ip-calculator](https://hitung-ip.pages.dev)
-basically counts ip.
-`allSubjectsGrade/TotalSubjects`
+This is a form for inputting and calculating student grades. It reads from a JSON file and generates a form with input fields for each subject listed in the file. The user can input their grades for each subject and the app will calculate their overall average grade.
+
 
 
 _very customizable dawg_
