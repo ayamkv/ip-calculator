@@ -5,75 +5,18 @@
   <title>ip calculator.</title>
   <link rel="shortcut icon" type="image/png" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/81/flushed-face_1f633.png"/>
   <link rel="stylesheet" type="text/css" href="style.css">
+  
 </head>
 <body>
   <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/81/flushed-face_1f633.png">
     <h2>kalkulator ip.</h2>
     <p>menghitung total ip mu :) </p>
     <a href="https://instagram.com/raaharja">@raaharja</a>
-    <p id="safari"></p>
-    <div class="row">
-        <div class="inputs">
-          <label id="Pendidikan Agama" for="input1">Pendidikan Agama</label>
-          <input type="number" id="input1" />
-        </div>
-        <div class="inputs">
-          <label id="PPkn" for="input2">PPkn</label>
-          <input type="number" id="input2" />
-        </div>
-        <div class="inputs">
-          <label id="Bahasa Indonesia" for="input3">Bahasa Indonesia</label>
-          <input type="number" id="input3" />
-        </div>
-        <div class="inputs">
-          <label id="MTKW" for="input4">MTKW</label>
-          <input type="number" id="input4" />
-        </div>
-        <div class="inputs">
-          <label id="Sejarah Indonesia" for="input5">Sejarah Indonesia</label>
-          <input type="number" id="input5" />
-        </div>
-        <div class="inputs">
-          <label id="Bahasa Inggris" for="input6">Bahasa Inggris</label>
-          <input type="number" id="input6" />
-        </div>
-        <div class="inputs">
-          <label id="Seni Budaya" for="input7">Seni Budaya</label>
-          <input type="number" id="input7" />
-        </div>
-        <div class="inputs">
-          <label id="PJOK" for="input8">PJOK</label>
-          <input type="number" id="input8" />
-        </div>
-        <div class="inputs">
-          <label id="Prakarya" for="input9">Prakarya</label>
-          <input type="number" id="input9" />
-        </div>
-        <div class="inputs">
-          <label id="Bahasa Jawa" for="input10">Bahasa Jawa</label>
-          <input type="number" id="input10" />
-        </div>
-        <div class="inputs">
-          <label id="MTKP" for="input11">MTKP</label>
-          <input type="number" id="input11" />
-        </div>
-        <div class="inputs">
-          <label id="Biologi" for="input12">Biologi</label>
-          <input type="number" id="input12" />
-        </div>
-        <div class="inputs">
-          <label id="Fisika" for="input13">Fisika</label>
-          <input type="number" id="input13" />
-        </div>
-        <div class="inputs">
-          <label for="input14">Kimia</label>
-          <input type="number" id="input14" />
-        </div>
-        <div class="inputs">
-          <label for="input15">Limit</label>
-          <input type="number" id="input15" />
-        </div>
+    <!-- <script src="createInput.js"></script> -->
+    <div id="alert-box"></div>
 
+    <div class="row">
+    
     </div>
     <div class="row-c" id="raw-c">
       
@@ -85,7 +28,63 @@
     <br>
   </div>
   <script src="confetti.min.js"></script>
+  <script src="createInput.js"></script>
   <script>
+  function isNumeric(value) {
+    return !isNaN(parseFloat(value)) && isFinite(value);
+}
+function showAlert(message) {
+  const alertBox = document.getElementById('alert-box');
+  alertBox.innerHTML = message;
+  alertBox.classList.add('show');
+  setTimeout(function() {
+    alertBox.classList.remove('show');
+    alertBox.innerHTML = '';
+  }, 1000); // Hide alert after 1 second (1000 milliseconds)
+}
+
+
+
+
+  function enforceMinMax(inputElement) {
+    const value = inputElement.value;
+    const min = inputElement.min;
+    const max = inputElement.max;
+
+    if (value === "") {
+      return;
+    }
+
+    const valueAsNumber = parseInt(value);
+    const minAsNumber = parseInt(min);
+    const maxAsNumber = parseInt(max);
+
+    if (valueAsNumber < minAsNumber) {
+      inputElement.value = min;
+    }
+    if (valueAsNumber > maxAsNumber) {
+      inputElement.value = max;
+    }
+  };
+  function enforceNumberInput(inputElement) {
+
+  inputElement.addEventListener('keyup', function(event) {
+    setTimeout(function() {
+      if (!isNumeric(inputElement.value)) {
+        
+        inputElement.value = inputElement.value.slice(0, -1);
+        showAlert("Isi dengan nomor saja!!!!");
+ // Restore original placeholder after 5 seconds (5000 milliseconds)
+      }
+    }, 100); // Check value after 100 milliseconds
+  });
+}
+
+
+
+
+
+
     let confetti = new Confetti("calculate");
     confetti.setSize(1.5);
     confetti.setCount(20);
@@ -95,12 +94,6 @@
             (t.target.style.visibility = ""), (t.target.style.opacity = 1);
           }, 1.3e3);
       }
-      if ('safari' in window.navigator && window.navigator.vendor.indexOf('Apple') !== -1) {
-  document.getElementById("safari").innerHTML = "anjay si paling iphone";
-}
-if (!('chrome' in window)) {
-  document.getElementById("safari").innerHTML = "";
-}
 
 
 
