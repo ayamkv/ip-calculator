@@ -48,11 +48,11 @@ h2 {
   line-height: 0%;
   color: #8069ff;
   text-shadow: 10px 5px 20px #473897;
-  transition: 1s ease-in-out;
+  transition: 200ms linear;
 }
 
 h2:hover {
-  text-shadow: 15px 10px 60px #1f174a;
+  color: white;
 }
 
 a {
@@ -65,6 +65,10 @@ a {
 
 a:hover {
   color: #8069ff;
+}
+
+.links {
+  margin: 0 1em;
 }
 
 label {
