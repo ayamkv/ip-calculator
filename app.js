@@ -118,3 +118,25 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById("calculate").addEventListener("click", calculateResult);
 
 });
+
+//pwa install button
+
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    deferredPrompt = e;
+});
+
+const installApp = document.getElementById('a2hs');
+
+installApp.addEventListener('click', async () => {
+    if (deferredPrompt !== null) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        if (outcome === 'accepted') {
+            deferredPrompt = null;
+        }
+    }
+});
+
+
