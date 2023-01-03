@@ -6,6 +6,7 @@
   <link rel="shortcut icon" type="image/png" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/81/flushed-face_1f633.png"/>
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="https://kit.fontawesome.com/9d7e57a70d.js" crossorigin="anonymous"></script>
+  <link rel="manifest" href="./manifest.json" />
 </head>
 <body>
   <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/81/flushed-face_1f633.png">
@@ -101,9 +102,19 @@ function showAlert(message) {
           }, 1.3e3);
       }
 
-
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/sw.js")
+    .then(serviceWorker => {
+      console.log("Service Worker registered: ", serviceWorker);
+    })
+    .catch(error => {
+      console.error("Error registering the Service Worker: ", error);
+    });
+}
 
   </script>
-  <script src="scritpt.js">  </script>
+  <script src="app.js">  </script>
+  <script src="./serviceworker.js">
 </body>
 </html>
