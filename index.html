@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#8069ff" />
+
   <title>ip calculator.</title>
   <link rel="shortcut icon" type="image/png" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/81/flushed-face_1f633.png"/>
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -9,9 +11,14 @@
   <link rel="manifest" href="./manifest.json" />
 </head>
 <body>
-  <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/81/flushed-face_1f633.png">
+  <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/81/flushed-face_1f633.png" alt="logo flushed face">
     <h2>kalkulator ip.</h2>
     <p>menghitung total ip mu :) </p>
+    <a class="links" id="a2hs" href="/">
+      <i class="fa-solid fa-square-plus"></i>
+      Add to home screen
+    </a>
+    <br>
     <a class="links" href="https://instagram.com/raaharja">
       <i class="fa-brands fa-square-instagram"></i>
       raaharja</a>
@@ -19,6 +26,8 @@
       <i class="fa-brands fa-square-github"></i>
       ayamkv
       </a>
+
+
     <!-- <script src="createInput.js"></script> -->
     <div id="alert-box"></div>
 
@@ -87,11 +96,6 @@ function showAlert(message) {
   });
 }
 
-
-
-
-
-
     let confetti = new Confetti("calculate");
     confetti.setSize(1.5);
     confetti.setCount(20);
@@ -115,6 +119,6 @@ if ("serviceWorker" in navigator) {
 
   </script>
   <script src="app.js">  </script>
-  <script src="./serviceworker.js">
+  <script src="sw.js"></script>
 </body>
 </html>
