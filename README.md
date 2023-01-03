@@ -1,5 +1,5 @@
 # [ip-calculator](https://hitung-ip.pages.dev)
-a form for inputting and calculating student grades. 
+a form for inputting and calculating student grades. with PWA !
 <br><br>
 
 _very customizable dawg_

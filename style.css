@@ -70,6 +70,10 @@ a:hover {
 .links {
   margin: 0 1em;
 }
+#a2hs {
+  font-size: 1rem;
+  font-weight: bold;
+}
 
 label {
   font-style: oblique;

@@ -1,5 +1,6 @@
 {
     "name" : "IP Calculator",
+    "description" : "Lorem",
     "short_name" : "IP Calculator",
     "start_url" : "/index.html",
     "background_color" : "#2b2b33",
