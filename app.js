@@ -139,4 +139,7 @@ installApp.addEventListener('click', async () => {
     }
 });
 
-
+window.addEventListener('beforeinstallprompt', function(e) {
+  document.querySelector('.a2hs').style.display = 'block';
+  deferredPrompt = e;
+});
