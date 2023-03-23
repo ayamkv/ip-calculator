@@ -2,7 +2,7 @@
 
   "rewrites": [
 
-    { "source": "(.*)", "destination": "https://raharja.eu.org/hitung-ip" }
+    { "source": "/", "destination": "https://raharja.eu.org/hitung-ip" }
 
   ]
 
